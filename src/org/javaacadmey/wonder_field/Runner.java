@@ -1,5 +1,7 @@
 package org.javaacadmey.wonder_field;
 
+import org.javaacadmey.wonder_field.player.Player;
+
 public class Runner {
     public static void main(String[] args) throws InterruptedException {
         //Game game = new Game();
@@ -23,5 +25,9 @@ public class Runner {
 
         System.out.println();
         tableau.showAllLetter();
+        System.out.println("____");
+
+        Player player = new Player("Вова", "SPB");
+        System.out.println(player.makeMove());
     }
 }
