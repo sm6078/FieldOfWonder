@@ -41,10 +41,7 @@ public class Player {
             } else {
                 System.out.println("Вы ввели некорректные значения.");
             }
-
-
         }
-
     }
 
     public PlayerAnswer getLetterFromUser() {
