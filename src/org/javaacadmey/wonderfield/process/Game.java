@@ -8,10 +8,10 @@ import org.javaacadmey.wonderfield.player.PlayerAnswer;
 public class Game {
 
     //количество игроков
-    public static final int NUMBER_OF_PLAYERS = 3;
+    private static final int NUMBER_OF_PLAYERS = 3;
 
     //всего количество раундов
-    public static final int TOTAL_ROUNDS = 4;
+    private static final int TOTAL_ROUNDS = 4;
 
     //групповых раундов - 3,
     public static final int COUNT_GROUP_ROUNDS = 3;
@@ -20,6 +20,7 @@ public class Game {
     public static final int INDEX_FINAL_ROUND = 3;
 
     public static Scanner scanner = new Scanner(System.in);
+
     private String[][] questionsAnswers = new String[TOTAL_ROUNDS][2];
 
     private Player[] players = new Player[NUMBER_OF_PLAYERS];
