@@ -1,4 +1,4 @@
-package org.javaacadmey.wonder_field.player;
+package org.javaacadmey.wonderfield.player;
 
 public class PlayerAnswer {
     private boolean isWholeWord;
@@ -7,5 +7,13 @@ public class PlayerAnswer {
     public PlayerAnswer(boolean isWholeWord, String answer) {
         this.isWholeWord = isWholeWord;
         this.answer = answer;
+    }
+
+    public boolean isWholeWord() {
+        return isWholeWord;
+    }
+
+    public String getAnswer() {
+        return answer;
     }
 }

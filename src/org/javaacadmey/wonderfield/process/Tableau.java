@@ -1,4 +1,4 @@
-package org.javaacadmey.wonder_field;
+package org.javaacadmey.wonderfield.process;
 
 public class Tableau {
     private final String correctAnswer;
@@ -18,9 +18,11 @@ public class Tableau {
     }
 
     public void showAllLetter() {
+        System.out.print("Табло -> ");
         for (String s : word) {
             System.out.print(s == null ? "_" : s.toUpperCase());
         }
+        System.out.println();
     }
 
     public void openLetter(String letter) {
@@ -39,9 +41,9 @@ public class Tableau {
         }
     }
 
-    private boolean isUnknownLetters() {
+    public boolean isUnknownLetters() {
         for (String s : word) {
-            if (s.equals("_")) {
+            if (s == null) {
                 return true;
             }
         }
