@@ -38,9 +38,9 @@ public class Game {
     public void init() throws InterruptedException {
         System.out.println("Запуск игры \"Поле Чудес\" - подготовка к игре. "
                 + "Вам нужно ввести вопросы и ответы для игры:");
-        //getFromUserData();
-        fillQuestionsAnswers();
-        printInputQuestionsAnswers();
+        getFromUserQuestionsAnswers();
+        //fillQuestionsAnswers();
+        //printInputQuestionsAnswers();
         System.out.println("Подготовка к игре. Вам нужно указать данные игроков:");
         System.out.println("Иницализация закончена, игра начнется через 5 секунд");
         Thread.sleep(5000);
@@ -62,7 +62,6 @@ public class Game {
             yakubovich.invite(getNamesForRound(players), i + 1);
             yakubovich.askQuestion(questionsAnswers[i][0]);
             tableau = new Tableau(questionsAnswers[i][1]);
-            System.out.println("Ответ: " + tableau.getCorrectAnswer());
             winners[i] = process(players, i);
         }
     }
@@ -131,7 +130,6 @@ public class Game {
         yakubovich.invite(getNamesForRound(winners), INDEX_FINAL_ROUND + 1);
         yakubovich.askQuestion(questionsAnswers[INDEX_FINAL_ROUND][0]);
         tableau = new Tableau(questionsAnswers[INDEX_FINAL_ROUND][1]);
-        System.out.println("Ответ: " + tableau.getCorrectAnswer());
         process(winners, INDEX_FINAL_ROUND);
     }
 
