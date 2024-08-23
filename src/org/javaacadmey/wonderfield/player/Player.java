@@ -58,7 +58,7 @@ public class Player {
                 System.out.println("Ожидаем  получить букву");
             } else {
                 Matcher matkirletter = patkirletter.matcher(userInput);
-                if (matkirletter.matches() == true) {
+                if (matkirletter.matches()) {
                     System.out.println("Игрок " + name + " буква: " + userInput);
                     return new PlayerAnswer(false, userInput.toUpperCase());
                 } else {
@@ -76,7 +76,7 @@ public class Player {
                 System.out.println("Ожидаем  получить слово");
             } else {
                 Matcher matkirletter = patkirletter.matcher(userInput);
-                if (matkirletter.matches() == true) {
+                if (matkirletter.matches()) {
                     System.out.println("Игрок " + name + " cлово: " + userInput);
                     return new PlayerAnswer(true, userInput.toUpperCase());
                 } else {
