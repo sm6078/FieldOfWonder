@@ -40,9 +40,9 @@ public class Player {
                     + "и enter, если хотите слово нажмите 'c' и enter: ");
             String userInput = scanner.nextLine();
             if (userInput.equals("с")) {
-                return getWordFromUser(name);
+                return getWordFromUser();
             } else if (userInput.equals("б")) {
-                return getLetterFromUser(name);
+                return getLetterFromUser();
 
             } else {
                 System.out.println("Вы ввели некорректные значения.");
@@ -50,7 +50,7 @@ public class Player {
         }
     }
 
-    private PlayerAnswer getLetterFromUser(String namePlayer) {
+    private PlayerAnswer getLetterFromUser() {
         while (true) {
             System.out.print("введите букву: ");
             String userInput = scanner.nextLine();
@@ -59,7 +59,7 @@ public class Player {
             } else {
                 Matcher matkirletter = patkirletter.matcher(userInput);
                 if (matkirletter.matches() == true) {
-                    System.out.println("Игрок " + namePlayer + " буква: " + userInput);
+                    System.out.println("Игрок " + name + " буква: " + userInput);
                     return new PlayerAnswer(false, userInput.toUpperCase());
                 } else {
                     System.out.println("Ожидаем букву на русском языке");
@@ -68,7 +68,7 @@ public class Player {
         }
     }
 
-    private PlayerAnswer getWordFromUser(String namePlayer) {
+    private PlayerAnswer getWordFromUser() {
         while (true) {
             System.out.print("введите слово: ");
             String userInput = scanner.nextLine();
@@ -77,7 +77,7 @@ public class Player {
             } else {
                 Matcher matkirletter = patkirletter.matcher(userInput);
                 if (matkirletter.matches() == true) {
-                    System.out.println("Игрок " + namePlayer + " cлово: " + userInput);
+                    System.out.println("Игрок " + name + " cлово: " + userInput);
                     return new PlayerAnswer(true, userInput.toUpperCase());
                 } else {
                     System.out.println("Ожидаем слово на русском языке");
